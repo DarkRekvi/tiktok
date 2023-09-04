@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, contentStr, Toast.LENGTH_LONG);
             toast.show();
         });
+        /*НОВЫЙ КОД*/
         //(View)->{} (Аналог public void click(View view){})
     }
 
