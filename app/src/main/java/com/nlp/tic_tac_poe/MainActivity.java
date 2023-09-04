@@ -7,7 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/*
+* Этапы сохранения проекта в git
+* git init - инициализация гита в проекта
+* git add . добавить все файлы в гиту
+* git commit -m "текст сообщения"
+* */
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, contentStr, Toast.LENGTH_LONG);
             toast.show();
         });
-        /*НОВЫЙ КОД*/
-        //(View)->{} (Аналог public void click(View view){})
+
     }
 
 }
