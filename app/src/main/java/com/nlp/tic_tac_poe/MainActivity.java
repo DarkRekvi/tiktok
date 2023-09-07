@@ -59,7 +59,7 @@ import java.util.ArrayList;
             }
             //Если в кнопке нет текста то будет выходить
             GameInfo.isTurn = !GameInfo.isTurn;
-
+            initClearBordBtn();
         };
 
         binding = GameBoardBinding.inflate(getLayoutInflater());
@@ -99,7 +99,7 @@ import java.util.ArrayList;
             //Установка цвета для кнопки
             button.setBackgroundTintList(
                     ContextCompat.getColorStateList
-                    (getApplicationContext(),R.color.gray));
+                    (getApplicationContext(),R.color.coral));
             button.setWidth(convertToPixel(50));
             button.setHeight(convertToPixel(90));
             //Добавляем
@@ -137,5 +137,25 @@ import java.util.ArrayList;
                     ContextCompat.getColorStateList
                             (getApplicationContext(), R.color.green));
         }
+    }
+
+    private void initClearBordBtn(){
+        Button clearBtn = findViewById(R.id.clear_button);
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(
+                        getApplicationContext(),
+                        "Новая игра",
+                        Toast.LENGTH_LONG).show();
+                for(Button square: squares) {
+                    square.setText("");
+                    square.setBackgroundTintList(
+                            ContextCompat.getColorStateList(
+                                    getApplicationContext(),
+                                    R.color.coral));
+                }
+            }
+        });
     }
 }
